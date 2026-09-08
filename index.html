@@ -1,5 +1,720 @@
-<h1> Hola Mundo </h1>
-<h1> ISUPOL </h1>
-<h4> Saludos desde Cuenca, los saluda Richard Cuenca </h4>
-<h5> Septiembre 2026 </h5>
-<h6> Carrera de Investigacion de Ciberdelitos </h6>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Cuenca | Hoja de Vida Profesional</title>
+    <meta
+      name="description"
+      content="Sitio web profesional para promocionar la hoja de vida de Richard Cuenca, especialista en investigación de ciberdelitos."
+    />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --bg-soft: #10182d;
+        --panel: #121c33;
+        --panel-2: #1a2748;
+        --text: #edf3ff;
+        --muted: #b7c7eb;
+        --primary: #5eead4;
+        --primary-strong: #2dd4bf;
+        --accent: #7c9cff;
+        --line: rgba(255, 255, 255, 0.12);
+        --shadow: 0 24px 64px rgba(15, 23, 42, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(124, 156, 255, 0.22), transparent 32%),
+          linear-gradient(135deg, var(--bg), var(--bg-soft) 45%, #0d1427);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 16, 32, 0.75);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .nav-cta {
+        padding: 0.8rem 1.25rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #06131d;
+        font-weight: 700;
+        box-shadow: var(--shadow);
+      }
+
+      .hero {
+        padding: 84px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(94, 234, 212, 0.12);
+        border: 1px solid rgba(94, 234, 212, 0.4);
+        color: var(--primary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4vw, 4.4rem);
+        line-height: 1.05;
+        margin: 22px 0 16px;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, var(--primary), #c4b5fd, #7dd3fc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead {
+        font-size: 1.08rem;
+        color: var(--muted);
+        max-width: 670px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.95rem 1.4rem;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button.primary {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        border-color: transparent;
+        color: #06131d;
+        font-weight: 700;
+        box-shadow: var(--shadow);
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 34px;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 1rem;
+      }
+
+      .stat-number {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .profile-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .avatar-box {
+        border-radius: 24px;
+        min-height: 320px;
+        background:
+          linear-gradient(160deg, rgba(94, 234, 212, 0.15), rgba(124, 156, 255, 0.22)),
+          linear-gradient(135deg, #1d2a4a, #10182d);
+        border: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .avatar-box::before {
+        content: "RC";
+        font-size: clamp(4rem, 9vw, 8rem);
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        color: rgba(255, 255, 255, 0.12);
+      }
+
+      .profile-meta {
+        display: grid;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .meta-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .meta-item strong {
+        color: var(--text);
+      }
+
+      section {
+        padding: 36px 0;
+      }
+
+      .section-header {
+        margin-bottom: 24px;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+      }
+
+      .section-header p {
+        margin: 10px 0 0;
+        color: var(--muted);
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px;
+      }
+
+      .about-text {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .highlights {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .highlight {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 0.9rem 1rem;
+        border-radius: 14px;
+        background: rgba(124, 156, 255, 0.06);
+        border: 1px solid rgba(124, 156, 255, 0.2);
+        color: var(--muted);
+      }
+
+      .bullet {
+        width: 12px;
+        height: 12px;
+        margin-top: 0.3rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        box-shadow: 0 0 0 6px rgba(94, 234, 212, 0.12);
+        flex-shrink: 0;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 24px;
+        border-left: 2px solid rgba(94, 234, 212, 0.5);
+        margin-left: 8px;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--primary);
+        box-shadow: 0 0 0 5px rgba(94, 234, 212, 0.18);
+      }
+
+      .timeline-item h3 {
+        margin: 0 0 8px;
+        font-size: 1.16rem;
+      }
+
+      .timeline-item .role {
+        display: inline-block;
+        margin-bottom: 8px;
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .timeline-item .meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-bottom: 8px;
+      }
+
+      .timeline-item p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .skills-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .skill-group h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.6rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--line);
+        color: var(--text);
+        font-size: 0.92rem;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .contact-item {
+        padding: 20px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .contact-item h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .contact-item p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta {
+        padding: 24px;
+        border-radius: 24px;
+        border: 1px solid rgba(94, 234, 212, 0.35);
+        background: linear-gradient(135deg, rgba(94, 234, 212, 0.09), rgba(124, 156, 255, 0.08));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-top: 8px;
+      }
+
+      .cta h3 {
+        margin: 0 0 8px;
+        font-size: clamp(1.35rem, 2vw, 1.9rem);
+      }
+
+      .cta p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 28px 0 48px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 860px) {
+        .hero-grid,
+        .grid-2,
+        .contact-grid,
+        .skills-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          padding: 14px 0;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding-top: 8px;
+        }
+
+        .cta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">Richard Cuenca</div>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="nav-cta" href="mailto:richard.cuenca@email.com">Contactar</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Currículum profesional</span>
+            <h1>
+              Soy <span class="gradient-text">Richard Cuenca</span><br />
+              especialista en investigación de ciberdelitos.
+            </h1>
+            <p class="lead">
+              Me desempeño en el análisis, prevención y acompañamiento de temas relacionados con
+              seguridad digital, investigación forense y protección de información. Mi enfoque combina
+              rigor técnico, pensamiento crítico y comunicación efectiva para aportar valor en entornos
+              profesionales, académicos y de investigación.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#contacto">Solicitar información</a>
+              <a class="button secondary" href="#experiencia">Ver experiencia</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-card">
+                <div class="stat-number">+6</div>
+                <div class="stat-label">Años de experiencia</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Proyectos relevantes</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Compromiso profesional</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="profile-card" aria-label="Perfil profesional">
+            <div class="avatar-box" aria-hidden="true"></div>
+            <div class="profile-meta">
+              <div class="meta-item"><span>Ubicación</span><strong>Cuenca, Ecuador</strong></div>
+              <div class="meta-item"><span>Especialidad</span><strong>Ciberdelitos</strong></div>
+              <div class="meta-item"><span>Email</span><strong>richard.cuenca@email.com</strong></div>
+              <div class="meta-item"><span>LinkedIn</span><strong>/in/richardcuenca</strong></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="sobre-mi">
+        <div class="container">
+          <div class="section-header">
+            <h2>Sobre mí</h2>
+            <p>Perfil profesional orientado a la investigación, la seguridad digital y el aprendizaje constante.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <p class="about-text">
+                Soy una persona proactiva, organizada y enfocada en resultados. He desarrollado mi carrera
+                alrededor de la investigación de ciberdelitos, con interés en la prevención, el análisis
+                de amenazas y la protección de la información en entornos digitales. Me caracterizo por
+                mi capacidad de adaptación, trabajo en equipo y atención a los detalles.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="highlights">
+                <div class="highlight">
+                  <span class="bullet"></span>
+                  <span>Fortales en análisis de riesgos, investigación, documentación y presentación de hallazgos.</span>
+                </div>
+                <div class="highlight">
+                  <span class="bullet"></span>
+                  <span>Enfoque en soluciones prácticas con impacto real en seguridad, cumplimiento y continuidad operativa.</span>
+                </div>
+                <div class="highlight">
+                  <span class="bullet"></span>
+                  <span>Actitud responsable, ética profesional y disposición para seguir aprendiendo.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia">
+        <div class="container">
+          <div class="section-header">
+            <h2>Experiencia</h2>
+            <p>Trayectoria profesional con enfoque en investigación, análisis y seguridad digital.</p>
+          </div>
+
+          <div class="timeline">
+            <article class="card timeline-item">
+              <h3>Investigador de Ciberdelitos</h3>
+              <span class="role">Especialista en seguridad digital</span>
+              <div class="meta">2022 - Presente • Cuenca, Ecuador</div>
+              <p>
+                Realizo análisis de casos relacionados con ciberdelitos, trabajo con información sensible,
+                contribuyo a la identificación de patrones y apoyo en procesos de mitigación, documento
+                hallazgos y participo en actividades de investigación y prevención.
+              </p>
+            </article>
+
+            <article class="card timeline-item">
+              <h3>Analista de Información y Protección</h3>
+              <span class="role">Gestión de riesgo y seguridad</span>
+              <div class="meta">2020 - 2022 • Cuenca, Ecuador</div>
+              <p>
+                Participé en procesos de revisión de escenarios de riesgo, análisis de incidentes y apoyo
+                en la implementación de medidas preventivas y de respuesta, siempre orientado a fortalecer
+                la seguridad de la información y la continuidad operativa.
+              </p>
+            </article>
+
+            <article class="card timeline-item">
+              <h3>Asistente de Investigación</h3>
+              <span class="role">Soporte académico y documental</span>
+              <div class="meta">2018 - 2020 • Cuenca, Ecuador</div>
+              <p>
+                Apoyé actividades de investigación, revisión documental, elaboración de informes y análisis
+                de datos para proyectos académicos y profesionales, fortaleciendo mis capacidades de síntesis,
+                organización y rigor metodológico.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades">
+        <div class="container">
+          <div class="section-header">
+            <h2>Habilidades</h2>
+            <p>Competencias técnicas y profesionales que me permiten aportar valor en distintos escenarios.</p>
+          </div>
+
+          <div class="skills-wrap">
+            <div class="card skill-group">
+              <h3>Competencias técnicas</h3>
+              <div class="skill-list">
+                <span class="skill-tag">Investigación digital</span>
+                <span class="skill-tag">Análisis de riesgos</span>
+                <span class="skill-tag">Ciberseguridad</span>
+                <span class="skill-tag">Forense digital</span>
+                <span class="skill-tag">Documentación técnica</span>
+                <span class="skill-tag">Protección de datos</span>
+              </div>
+            </div>
+
+            <div class="card skill-group">
+              <h3>Competencias blandas</h3>
+              <div class="skill-list">
+                <span class="skill-tag">Comunicación efectiva</span>
+                <span class="skill-tag">Trabajo en equipo</span>
+                <span class="skill-tag">Pensamiento crítico</span>
+                <span class="skill-tag">Organización</span>
+                <span class="skill-tag">Responsabilidad</span>
+                <span class="skill-tag">Adaptabilidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <h2>Educación</h2>
+            <p>Formación académica y desarrollo profesional continuo.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <h3>Ingeniería o carrera afín</h3>
+              <p class="about-text">
+                Formación académica orientada a la investigación, el análisis y la resolución de problemas,
+                con especial interés en temas de seguridad, tecnología y gestión de información.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Especialización</h3>
+              <p class="about-text">
+                Desarrollo continuo en temas de ciberdelitos, ciberseguridad, protección de datos y análisis
+                de amenazas digitales para fortalecer mi perfil profesional y aportar valor al entorno laboral.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contacto</h2>
+            <p>Estoy disponible para oportunidades profesionales, colaboraciones y proyectos relacionados con la seguridad digital.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h3>Email</h3>
+              <p>richard.cuenca@email.com</p>
+            </div>
+            <div class="contact-item">
+              <h3>Teléfono</h3>
+              <p>+593 99 123 4567</p>
+            </div>
+            <div class="contact-item">
+              <h3>LinkedIn</h3>
+              <p>/in/richardcuenca</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h3>¿Quieres conocer más sobre mi perfil?</h3>
+              <p>Puedo aportar valor en proyectos vinculados a seguridad digital, investigación y análisis.</p>
+            </div>
+            <a class="button primary" href="mailto:richard.cuenca@email.com">Escríbeme</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 Richard Cuenca • Hoja de vida profesional</div>
+    </footer>
+  </body>
+</html>
